@@ -15,3 +15,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@layer components {
+  .big-daddy {
+      @apply hidden lg:block;
+  }
+
+  .small-daddy {
+      @apply lg:hidden block;
+  }
+}
