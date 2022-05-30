@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const AddProduct = () => {
     const {
@@ -49,7 +50,8 @@ const AddProduct = () => {
                         )
                         .then((res) => {
                             if (res.data.insertedId) {
-                                alert("Product added successfully");
+                                // alert("Product added successfully");
+                                toast.success("Product added successfully");
                                 reset();
                                 console.log(data);
                             }
@@ -74,11 +76,11 @@ const AddProduct = () => {
                             {...register("category")}
                             className="select select-warning w-full max-w-xs"
                         >
-                            <option>BRAKES</option>
-                            <option>REPLACEMENT PARTS</option>
-                            <option>SAFETY ACCESSORIES</option>
-                            <option>TIRES</option>
-                            <option>STEERING WHEEL</option>
+                            <option>Measuring Tape</option>
+                            <option>Pipe Wrench</option>
+                            <option>Any Hardware</option>
+                            <option>Wood Cutting Disk</option>
+                            <option>Welding Machine</option>
                         </select>
                     </div>
                     <div className="form-control w-full max-w-xs">

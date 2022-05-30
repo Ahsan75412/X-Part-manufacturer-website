@@ -32,7 +32,7 @@ const Footer = () => {
                         height="24"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         clip-rule="evenodd"
                         class="fill-current"
                     >

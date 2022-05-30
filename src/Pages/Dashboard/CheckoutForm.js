@@ -15,7 +15,7 @@ const CheckoutForm = ({ product }) => {
 
     useEffect(() => {
         fetch(
-            "https://http://localhost:5000/create-payment-intent",
+            "http://localhost:5000/create-payment-intent",
             {
                 method: "POST",
                 headers: {
@@ -44,7 +44,7 @@ const CheckoutForm = ({ product }) => {
         if (card === null) {
             return;
         }
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
+        const { error, n } = await stripe.createPaymentMethod({
             type: "card",
             card,
         });
