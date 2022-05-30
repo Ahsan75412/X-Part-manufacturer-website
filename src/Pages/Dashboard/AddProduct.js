@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
 
 const AddProduct = () => {
     const {
@@ -50,8 +49,7 @@ const AddProduct = () => {
                         )
                         .then((res) => {
                             if (res.data.insertedId) {
-                                // alert("Product added successfully");
-                                toast.success("Product added successfully");
+                                alert("Product added successfully");
                                 reset();
                                 console.log(data);
                             }
@@ -60,118 +58,124 @@ const AddProduct = () => {
                 console.log(result);
             });
 
-        //
+        
     };
 
     return (
-        <div className="card w-96 bg-gray-100 shadow-xl text-primary-content">
-            <div className="card-body">
-                <h2 className="card-title">Add a Product</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Category</span>
-                        </label>
-                        <select
-                            {...register("category")}
-                            className="select select-warning w-full max-w-xs"
-                        >
-                            <option>Measuring Tape</option>
-                            <option>Pipe Wrench</option>
-                            <option>Any Hardware</option>
-                            <option>Wood Cutting Disk</option>
-                            <option>Welding Machine</option>
-                        </select>
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Product Name</span>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            className="input input-bordered w-full max-w-xs"
-                            {...register("name")}
-                        />
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Description</span>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Description"
-                            className="input input-bordered w-full max-w-xs"
-                            {...register("description")}
-                        />
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">
-                                Available Quantity
-                            </span>
-                        </label>
-                        <input
-                            type="number"
-                            placeholder="Available Quantity"
-                            className="input input-bordered w-full max-w-xs"
-                            {...register("availableQty")}
-                        />
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Minimum Order</span>
-                        </label>
-                        <input
-                            type="number"
-                            placeholder="Minimum Order"
-                            className="input input-bordered w-full max-w-xs"
-                            {...register("minOrder")}
-                        />
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">
-                                Price per Product
-                            </span>
-                        </label>
-                        <input
-                            type="number"
-                            placeholder="Price per product"
-                            className="input input-bordered w-full max-w-xs"
-                            {...register("price")}
-                        />
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Image</span>
-                        </label>
-                        <input
-                            type="file"
-                            placeholder="Image"
-                            className="input input-bordered w-full max-w-xs"
-                            {...register("image", {
-                                required: {
-                                    value: true,
-                                    message: "Image is required",
-                                },
-                            })}
-                        />
-                        <label className="label">
-                            {errors.name?.type === "required" && (
-                                <span className="label-text-alt text-red-500">
-                                    {errors.name.message}
+        <div className="flex justify-center items-center p-10">
+            <div className="card w-96 bg-gray-100 shadow-xl text-primary-content">
+                <div className="card-body">
+                    <h2 className="text-center font-bold text-2xl">
+                        Add a Product
+                    </h2>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Category</span>
+                            </label>
+                            <select
+                                {...register("category")}
+                                className="select select-warning w-full max-w-xs"
+                            >
+                                <option>Measuring Tape</option>
+                                <option>Pipe Wrench</option>
+                                <option>Any Hardware</option>
+                                <option>Wood Cutting Disk</option>
+                                <option>Welding Machine</option>
+                            </select>
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Product Name</span>
+                            </label>
+                            <input
+                                type="text"
+                                placeholder="Name"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("name")}
+                            />
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Description</span>
+                            </label>
+                            <input
+                                type="text"
+                                placeholder="Description"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("description")}
+                            />
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">
+                                    Available Quantity
                                 </span>
-                            )}
-                        </label>
-                    </div>
+                            </label>
+                            <input
+                                type="number"
+                                placeholder="Available Quantity"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("availableQty")}
+                            />
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">
+                                    Minimum Order
+                                </span>
+                            </label>
+                            <input
+                                type="number"
+                                placeholder="Minimum Order"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("minOrder")}
+                            />
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">
+                                    Price per Product
+                                </span>
+                            </label>
+                            <input
+                                type="number"
+                                placeholder="Price per product"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("price")}
+                            />
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Image</span>
+                            </label>
+                            <input
+                                type="file"
+                                placeholder="Image"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("image", {
+                                    required: {
+                                        value: true,
+                                        message: "Image is required",
+                                    },
+                                })}
+                            />
+                            <label className="label">
+                                {errors.name?.type === "required" && (
+                                    <span className="label-text-alt text-red-500">
+                                        {errors.name.message}
+                                    </span>
+                                )}
+                            </label>
+                        </div>
 
-                    <input
-                        className="btn  btn-secondary w-full mt-5"
-                        type="submit"
-                        value="Add Product"
-                    />
-                </form>
+                        <input
+                            className="btn  btn-secondary w-full mt-5"
+                            type="submit"
+                            value="Add Product"
+                        />
+                    </form>
+                </div>
             </div>
         </div>
     );

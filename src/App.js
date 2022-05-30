@@ -20,8 +20,17 @@ import ManageProducts from "./Pages/Dashboard/ManageProducts";
 import Payment from "./Pages/Dashboard/Payment";
 import Footer from "./Pages/Shared/Footer";
 import Orders from "./Pages/Dashboard/Orders";
+import MyProfile from "./Pages/Dashboard/MyProfile";
+import Blog from "./Pages/Dashboard/Blog";
+import AllOrderList from "./Pages/Dashboard/AllOrderList";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "./firebase.init";
+import useAdmin from "./hooks/useAdmin";
+import NotFound from "./Pages/Shared/NotFound";
 
 function App() {
+    const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     return (
         <div>
             <Navbar />
@@ -43,10 +52,13 @@ function App() {
                         </RequireAuth>
                     }
                 >
-                    <Route index element={<OrderTable />}></Route>
+                    <Route index element={<MyProfile />}></Route>
+                    <Route path="orderTable" element={<OrderTable />}></Route>
                     <Route path="review" element={<AddReview />}></Route>
                     <Route path="myOrders" element={<MyOrders />}></Route>
                     <Route path="payment/:id" element={<Payment />}></Route>
+                    <Route path="profile" element={<MyProfile />}></Route>
+                    <Route path="blog" element={<Blog />}></Route>
                     <Route
                         path="users"
                         element={
@@ -72,6 +84,14 @@ function App() {
                         }
                     ></Route>
                     <Route
+                        path="allOrderList"
+                        element={
+                            <RequireAdmin>
+                                <AllOrderList />
+                            </RequireAdmin>
+                        }
+                    ></Route>
+                    <Route
                         path="manage"
                         element={
                             <RequireAdmin>
@@ -83,6 +103,7 @@ function App() {
                 <Route path="/shop" element={<Products />}></Route>
                 <Route path="/login" element={<Login />}></Route>
                 <Route path="/signup" element={<SignUp />}></Route>
+                <Route path="/*" element={<NotFound />}></Route>
             </Routes>
             <ToastContainer></ToastContainer>
             <Footer />

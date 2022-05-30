@@ -26,11 +26,11 @@ const Dashboard = () => {
                     {admin ? (
                         <>
                             <li>
-                                <Link to="/dashboard/users">All Users</Link>
+                                <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="/dashboard/addProduct">
-                                    Add Product
+                                <Link to="/dashboard/allOrderList">
+                                    All Order List
                                 </Link>
                             </li>
                             <li>
@@ -41,6 +41,16 @@ const Dashboard = () => {
                                     Manage Products
                                 </Link>
                             </li>
+
+                            <li>
+                                <Link to="/dashboard/addProduct">
+                                    Add Product
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="/dashboard/users">All Users</Link>
+                            </li>
                         </>
                     ) : (
                         <>
@@ -48,20 +58,26 @@ const Dashboard = () => {
                                 <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="/dashboard">Order List</Link>
+                                <Link to="/dashboard/orderTable">
+                                    Order Table
+                                </Link>
                             </li>
-                            {
-                                <li>
-                                    <Link to="/dashboard/myOrders">
-                                        My Order
-                                    </Link>
-                                </li>
-                            }
+
+                            <li>
+                                <Link to="/dashboard/myOrders">My Order</Link>
+                            </li>
+
                             <li>
                                 <Link to="/dashboard/review">Add Review</Link>
                             </li>
                         </>
                     )}
+                    <li>
+                        <Link to="/dashboard/blog">Blog</Link>
+                    </li>
+                    <li>
+                        <Link to="/dashboard/profile">My Profile</Link>
+                    </li>
                     <li>
                         {user ? (
                             <button className="btn btn-link" onClick={logout}>

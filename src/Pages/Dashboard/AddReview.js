@@ -11,7 +11,7 @@ const AddReview = () => {
             .then((res) => {
                 if (res.data.insertedId) {
                     alert("Review Added Successfully...!");
-                    
+                    toast.success("Review Added Successfully...!");
                     reset();
                 }
             });
