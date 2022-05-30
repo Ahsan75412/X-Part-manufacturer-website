@@ -9,7 +9,7 @@ const Products = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://localhost:5000/products")
+        fetch("https://polar-dusk-79749.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);
@@ -24,41 +24,41 @@ const Products = () => {
         <div>
             {location.pathname === "/" ? (
                 <div className="flex justify-between py-20 flex-col lg:flex-row px-20">
-                    <h2 className="text-4xl font-bold py-5 lg:py-0 ">
-                        Top Hot Deals
+                    <h2 className="text-4xl font-bold py-5 lg:py-0 text-neutral">
+                        Top Hot Product
                     </h2>
                     <Link to="/shop" className="link link-primary ">
                         SEE MORE
                     </Link>
                 </div>
             ) : (
-                <h2 className="text-2xl lg:text-4xl font-bold p-10">
-                    All Deals
+                <h2 className="text-2xl lg:text-4xl font-bold text-neutral p-10">
+                    All Products
                 </h2>
             )}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-10 lg:px-20">
                 {location.pathname === "/" || location.pathname === "/home "
                     ? products
-                          .slice(0, 4)
-                          .map((product) => (
-                              <Product
-                                  key={product._id}
-                                  product={product}
-                              ></Product>
-                          ))
+                        .slice(0, 4)
+                        .map((product) => (
+                            <Product
+                                key={product._id}
+                                product={product}
+                            ></Product>
+                        ))
                     : location.pathname === "/shop"
-                    ? products.map((product) => (
-                          <Product
-                              key={product._id}
-                              product={product}
-                          ></Product>
-                      ))
-                    : products.map((product) => (
-                          <Product
-                              key={product._id}
-                              product={product}
-                          ></Product>
-                      ))}
+                        ? products.map((product) => (
+                            <Product
+                                key={product._id}
+                                product={product}
+                            ></Product>
+                        ))
+                        : products.map((product) => (
+                            <Product
+                                key={product._id}
+                                product={product}
+                            ></Product>
+                        ))}
             </div>
         </div>
     );

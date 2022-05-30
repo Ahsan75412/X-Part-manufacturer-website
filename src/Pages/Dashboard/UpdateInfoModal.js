@@ -31,7 +31,7 @@ const UpdateInfoModal = () => {
             updatedGithub,
         };
         fetch(
-            `http://localhost:5000/info?email=${user.email}`,
+            `https://polar-dusk-79749.herokuapp.com/info?email=${user.email}`,
             {
                 method: "PUT",
                 headers: {

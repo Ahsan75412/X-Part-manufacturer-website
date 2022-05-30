@@ -10,7 +10,7 @@ const InfoModal = () => {
 
     const onSubmit = (data) => {
         axios
-            .post("http://localhost:5000/info", data)
+            .post("https://polar-dusk-79749.herokuapp.com/info", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     alert("Info added successfully");

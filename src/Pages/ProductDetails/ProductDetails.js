@@ -12,7 +12,7 @@ const ProductDetails = () => {
     useEffect(() => {
         setLoading(true);
         fetch(
-            `http://localhost:5000/products/${productId}`
+            `https://polar-dusk-79749.herokuapp.com/products/${productId}`
         )
             .then((res) => res.json())
             .then((data) => {

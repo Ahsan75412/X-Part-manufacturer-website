@@ -6,7 +6,7 @@ const Orders = () => {
     const [status, setStatus] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders", {
+        fetch("https://polar-dusk-79749.herokuapp.com/allOrders", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const Orders = () => {
         );
 
         if (warning) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://polar-dusk-79749.herokuapp.com/orders/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {
@@ -44,7 +44,7 @@ const Orders = () => {
 
         if (warning) {
             fetch(
-                `http://localhost:5000/orders/status/${id}`,
+                `https://polar-dusk-79749.herokuapp.com/orders/status/${id}`,
                 {
                     method: "PUT",
                 }

@@ -21,7 +21,7 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/shop">Shop</Link></li>
-        <li><Link to="/about">About</Link></li>
+       
         {user && (
             <li>
                 <Link to="/dashboard">Dashboard</Link>

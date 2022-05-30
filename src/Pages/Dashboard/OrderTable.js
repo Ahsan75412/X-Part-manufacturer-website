@@ -10,7 +10,7 @@ const OrderTable = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `http://localhost:5000/orders?email=${user.email}`,
+                `https://polar-dusk-79749.herokuapp.com/orders?email=${user.email}`,
                 {
                     method: "GET",
                     headers: {

@@ -18,6 +18,7 @@ const Categories = () => {
                     SEE MORE
                 </Link>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
                 <div className="card lg:card-side bg-accent shadow-xl">
                     <div className="card-body space-y-5">
@@ -128,6 +129,14 @@ const Categories = () => {
                     </figure>
                 </div>
             </div>
+
+
+
+
+
+
+
+
         </div>
     );
 };

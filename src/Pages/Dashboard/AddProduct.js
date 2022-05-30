@@ -37,7 +37,7 @@ const AddProduct = () => {
                     };
                     axios
                         .post(
-                            "http://localhost:5000/products",
+                            "https://polar-dusk-79749.herokuapp.com/products",
                             product,
                             {
                                 headers: {
@@ -58,7 +58,7 @@ const AddProduct = () => {
                 console.log(result);
             });
 
-        
+
     };
 
     return (

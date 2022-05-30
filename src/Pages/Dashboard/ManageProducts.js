@@ -9,7 +9,7 @@ const ManageProducts = () => {
         isLoading,
         refetch,
     } = useQuery("products", () =>
-        fetch("http://localhost:5000/products", {
+        fetch("https://polar-dusk-79749.herokuapp.com/products", {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             },
@@ -19,7 +19,10 @@ const ManageProducts = () => {
         return <Loading />;
     }
     return (
-        <div>
+        <div className="p-10 mb-10">
+            <h1 className="text-center font-bold text-2xl p-10">
+                Manage your products
+            </h1>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     <thead>
@@ -29,7 +32,7 @@ const ManageProducts = () => {
                             <th>Name</th>
                             <th>Quantity</th>
                             <th>Price per unit</th>
-                            <th></th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>

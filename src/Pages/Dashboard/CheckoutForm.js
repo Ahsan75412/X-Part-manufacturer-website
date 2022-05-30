@@ -15,7 +15,7 @@ const CheckoutForm = ({ product }) => {
 
     useEffect(() => {
         fetch(
-            "http://localhost:5000/create-payment-intent",
+            "https://polar-dusk-79749.herokuapp.com/create-payment-intent",
             {
                 method: "POST",
                 headers: {
@@ -82,7 +82,7 @@ const CheckoutForm = ({ product }) => {
             };
 
             fetch(
-                `hhttp://localhost:5000/orders/${_id}`,
+                `https://polar-dusk-79749.herokuapp.com/orders/${_id}`,
                 {
                     method: "PATCH",
                     headers: {

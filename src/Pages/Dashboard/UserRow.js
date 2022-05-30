@@ -7,7 +7,7 @@ const UserRow = ({ user, refetch, index }) => {
 
     const makeAdmin = () => {
         fetch(
-            `http://localhost:5000/user/admin/${email}`,
+            `https://polar-dusk-79749.herokuapp.com/user/admin/${email}`,
             {
                 method: "PUT",
                 headers: {
@@ -46,7 +46,7 @@ const UserRow = ({ user, refetch, index }) => {
                     </button>
                 )}
             </td>
-         
+
             <td>
                 <button className="btn btn-outline btn-sm btn-error">
                     Remove User

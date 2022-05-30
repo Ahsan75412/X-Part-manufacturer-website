@@ -3,7 +3,7 @@
 
 [Client side Repo Link] (https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Ahsan75412)
 
-[Firebase live-site] (https://x-part.web.app)
+[Firebase live-site] (https://x-part.web.app/)
 
 [Heroku live-site] (https://polar-dusk-79749.herokuapp.com/)
 

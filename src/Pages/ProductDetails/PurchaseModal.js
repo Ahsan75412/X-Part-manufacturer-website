@@ -23,15 +23,14 @@ const PurchaseModal = ({ product, update }) => {
         data.status = "Pending";
 
         axios
-            .post("http://localhost:5000/orders", data)
+            .post("https://polar-dusk-79749.herokuapp.com/orders", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     alert("Product added to my order");
                     reset();
                     update(
-                        `${
-                            parseInt(product.availableQty) -
-                            quantityRef.current.value
+                        `${parseInt(product.availableQty) -
+                        quantityRef.current.value
                         }`
                     );
                 }

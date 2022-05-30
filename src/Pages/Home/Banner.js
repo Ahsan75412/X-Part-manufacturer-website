@@ -21,10 +21,11 @@ const Banner = () => {
                     <div id="slide1" className="carousel-item relative w-full">
                         <div className="flex justify-evenly items-center w-full py-10">
                             <div>
-                                <h1 className="text-6xl font-bold pb-9">
-                                    Aftermarket <br />
-                                    Turbocharger <br />
-                                    Specialist
+                                <h1 className="text-5xl font-bold pb-9">
+                                Xpart is in its <br />
+                                initial phase of a <br />
+                                brand life cycle.  <br />
+                              
                                 </h1>
                                 <Link to="/shop">
                                     <button className="btn btn-primary">
@@ -32,7 +33,7 @@ const Banner = () => {
                                     </button>
                                 </Link>
                             </div>
-                            <img src={banner1} alt="" />
+                            <img style={{width: "700px"}} src={banner1} alt="" />
                         </div>
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide4" className="btn btn-circle">
@@ -47,15 +48,15 @@ const Banner = () => {
                         <div className="flex justify-evenly items-center w-full py-10">
                             <div>
                                 <h1 className="text-6xl font-bold pb-9">
-                                    Aftermarket <br />
-                                    Turbocharger <br />
-                                    Specialist
+                                Xpart is in its <br />
+                                initial phase of a <br />
+                                brand life cycle.  
                                 </h1>
                                 <button className="btn btn-primary">
                                     Discover more
                                 </button>
                             </div>
-                            <img src={banner2} alt="" />
+                            <img style={{width: "700px"}} src={banner2} alt="" />
                         </div>
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide1" className="btn btn-circle">
@@ -70,15 +71,15 @@ const Banner = () => {
                         <div className="flex justify-evenly items-center w-full">
                             <div>
                                 <h1 className="text-6xl font-bold pb-9">
-                                    Aftermarket <br />
-                                    Turbocharger <br />
-                                    Specialist
+                                Xpart is in its <br />
+                                initial phase of a <br />
+                                brand life cycle.  
                                 </h1>
                                 <button className="btn btn-primary">
                                     Discover more
                                 </button>
                             </div>
-                            <img src={banner3} alt="" />
+                            <img style={{width: "700px"}} src={banner3} alt="" />
                         </div>
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide2" className="btn btn-circle">
@@ -100,12 +101,12 @@ const Banner = () => {
                 <div class="hero"></div>
                 <div class="hero-content text-center text-neutral-content">
                     <div class="hero-content flex-col lg:flex-row-reverse">
-                        <img src={banner1} class="w-[90%]" alt="" />
+                        <img style={{width: "700px"}} src={banner1} class="w-[90%]" alt="" />
                         <div>
                             <h1 className="text-3xl font-bold pb-9">
-                                Aftermarket <br />
-                                Turbocharger <br />
-                                Specialist
+                            Xpart is in its <br />
+                                initial phase of a <br />
+                                brand life cycle.  
                             </h1>
 
                             <Link to="/shop">

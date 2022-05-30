@@ -24,11 +24,11 @@ const Info = () => {
                 </div>
                 <div className="flex items-center justify-between">
                     <figure>
-                        <i className="fas fa-user-shield text-4xl text-primary"></i>
+                        <i class="fa-solid fa-heart text-4xl text-primary"></i>
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title">Money back guarantee</h2>
-                        <p>We return money within 30 days</p>
+                        <h2 className="card-title">Most Loved Brand</h2>
+                        <p>All Products Are Very popular </p>
                     </div>
                 </div>
             </div>
