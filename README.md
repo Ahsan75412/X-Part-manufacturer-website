@@ -1,11 +1,10 @@
+[Client side Repo Link] (https://github.com/Ahsan75412/X-Part-manufacturer-website)
 
-[Client side Repo Link] (https://github.com/programming-hero-web-course1/manufacturer-website-client-side-Ahsan75412)
+[Server side Repo Link] (https://github.com/Ahsan75412/-X-Part-manufacturer-website-server)
 
-[Client side Repo Link] (https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Ahsan75412)
+[Firebase live-site] (https://x-part.web.app)
 
-[Firebase live-site] (https://x-part.web.app/)
-
-[Heroku live-site] (https://x-part-manufacturer.onrender.com/)
+[Render deploy live-site] (https://x-part-manufacturer.onrender.com/)
 
 
 
