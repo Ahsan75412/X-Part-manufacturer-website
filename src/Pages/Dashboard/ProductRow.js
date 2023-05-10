@@ -12,7 +12,7 @@ const ProductRow = ({ product, index, refetch }) => {
     const { quantityRef, priceRef } = useRef(null);
 
     const handleDelete = (id) => {
-        fetch(`https://polar-dusk-79749.herokuapp.com/products/${id}`, {
+        fetch(`https://x-part-manufacturer.onrender.com/products/${id}`, {
             method: "DELETE",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -36,7 +36,7 @@ const ProductRow = ({ product, index, refetch }) => {
             updatedPrice,
         };
 
-        fetch(`https://polar-dusk-79749.herokuapp.com/products/${_id}`, {
+        fetch(`https://x-part-manufacturer.onrender.com/products/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -153,7 +153,7 @@ const ProductRow = ({ product, index, refetch }) => {
                             </div>
                         </div>
                     </form>
-                 
+
 
                     <label
                         for={`id${product._id}`}

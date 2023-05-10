@@ -15,7 +15,7 @@ const MyProfile = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `https://polar-dusk-79749.herokuapp.com/info?email=${user.email}`,
+                `https://x-part-manufacturer.onrender.com/info?email=${user.email}`,
                 {
                     method: "GET",
                 }

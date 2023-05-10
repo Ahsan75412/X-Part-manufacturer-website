@@ -10,7 +10,7 @@ const InfoModal = () => {
 
     const onSubmit = (data) => {
         axios
-            .post("https://polar-dusk-79749.herokuapp.com/info", data)
+            .post("https://x-part-manufacturer.onrender.com/info", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     alert("Info added successfully");

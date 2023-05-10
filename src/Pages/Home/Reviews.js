@@ -8,7 +8,7 @@ const Reviews = () => {
     //https://limitless-thicket-02169.herokuapp.com
     useEffect(() => {
         setLoading(true);
-        fetch("https://polar-dusk-79749.herokuapp.com/reviews")
+        fetch("https://x-part-manufacturer.onrender.com/reviews")
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data);

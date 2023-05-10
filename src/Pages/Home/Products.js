@@ -9,7 +9,7 @@ const Products = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://polar-dusk-79749.herokuapp.com/products")
+        fetch("https://x-part-manufacturer.onrender.com/products")
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);

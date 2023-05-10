@@ -12,7 +12,7 @@ const ProductDetails = () => {
     useEffect(() => {
         setLoading(true);
         fetch(
-            `https://polar-dusk-79749.herokuapp.com/products/${productId}`
+            `https://x-part-manufacturer.onrender.com/products/${productId}`
         )
             .then((res) => res.json())
             .then((data) => {

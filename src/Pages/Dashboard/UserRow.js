@@ -7,7 +7,7 @@ const UserRow = ({ user, refetch, index }) => {
 
     const makeAdmin = () => {
         fetch(
-            `https://polar-dusk-79749.herokuapp.com/user/admin/${email}`,
+            `https://x-part-manufacturer.onrender.com/user/admin/${email}`,
             {
                 method: "PUT",
                 headers: {

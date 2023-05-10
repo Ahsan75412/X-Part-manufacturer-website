@@ -15,7 +15,7 @@ const CheckoutForm = ({ product }) => {
 
     useEffect(() => {
         fetch(
-            "https://polar-dusk-79749.herokuapp.com/create-payment-intent",
+            "https://x-part-manufacturer.onrender.com/create-payment-intent",
             {
                 method: "POST",
                 headers: {
@@ -82,7 +82,7 @@ const CheckoutForm = ({ product }) => {
             };
 
             fetch(
-                `https://polar-dusk-79749.herokuapp.com/orders/${_id}`,
+                `https://x-part-manufacturer.onrender.com/orders/${_id}`,
                 {
                     method: "PATCH",
                     headers: {

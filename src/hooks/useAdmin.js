@@ -8,7 +8,7 @@ const useAdmin = (user) => {
         const email = user?.email;
         if (email) {
             // https://limitless-thicket-02169.herokuapp.com
-            const url = `https://polar-dusk-79749.herokuapp.com/admin/${email}`;
+            const url = `https://x-part-manufacturer.onrender.com/admin/${email}`;
             fetch(url, {
                 method: "GET",
                 headers: {

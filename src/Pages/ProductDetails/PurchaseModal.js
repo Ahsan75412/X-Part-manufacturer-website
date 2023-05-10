@@ -23,7 +23,7 @@ const PurchaseModal = ({ product, update }) => {
         data.status = "Pending";
 
         axios
-            .post("https://polar-dusk-79749.herokuapp.com/orders", data)
+            .post("https://x-part-manufacturer.onrender.com/orders", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     alert("Product added to my order");

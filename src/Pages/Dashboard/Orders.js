@@ -6,7 +6,7 @@ const Orders = () => {
     const [status, setStatus] = useState(true);
 
     useEffect(() => {
-        fetch("https://polar-dusk-79749.herokuapp.com/allOrders", {
+        fetch("https://x-part-manufacturer.onrender.com/allOrders", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const Orders = () => {
         );
 
         if (warning) {
-            const url = `https://polar-dusk-79749.herokuapp.com/orders/${id}`;
+            const url = `https://x-part-manufacturer.onrender.com/orders/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {
@@ -44,7 +44,7 @@ const Orders = () => {
 
         if (warning) {
             fetch(
-                `https://polar-dusk-79749.herokuapp.com/orders/status/${id}`,
+                `https://x-part-manufacturer.onrender.com/orders/status/${id}`,
                 {
                     method: "PUT",
                 }

@@ -37,7 +37,7 @@ const AddProduct = () => {
                     };
                     axios
                         .post(
-                            "https://polar-dusk-79749.herokuapp.com/products",
+                            "https://x-part-manufacturer.onrender.com/products",
                             product,
                             {
                                 headers: {

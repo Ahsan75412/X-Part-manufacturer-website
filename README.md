@@ -5,7 +5,7 @@
 
 [Firebase live-site] (https://x-part.web.app/)
 
-[Heroku live-site] (https://polar-dusk-79749.herokuapp.com/)
+[Heroku live-site] (https://x-part-manufacturer.onrender.com/)
 
 
 

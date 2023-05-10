@@ -5,7 +5,7 @@ const AllOrderList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("https://polar-dusk-79749.herokuapp.com/allOrders", {
+        fetch("https://x-part-manufacturer.onrender.com/allOrders", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

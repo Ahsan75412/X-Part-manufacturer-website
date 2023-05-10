@@ -9,7 +9,7 @@ const ManageProducts = () => {
         isLoading,
         refetch,
     } = useQuery("products", () =>
-        fetch("https://polar-dusk-79749.herokuapp.com/products", {
+        fetch("https://x-part-manufacturer.onrender.com/products", {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             },

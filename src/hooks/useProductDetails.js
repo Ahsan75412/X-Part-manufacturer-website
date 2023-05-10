@@ -4,7 +4,7 @@ const useProductDetails = (productId) => {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        const url = `https://polar-dusk-79749.herokuapp.com/products/${productId}`;
+        const url = `https://x-part-manufacturer.onrender.com/products/${productId}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => setProduct(data));

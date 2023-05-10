@@ -15,7 +15,7 @@ const MyOrders = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `https://polar-dusk-79749.herokuapp.com/orders?email=${user.email}`,
+                `https://x-part-manufacturer.onrender.com/orders?email=${user.email}`,
                 {
                     method: "GET",
                     headers: {
@@ -47,7 +47,7 @@ const MyOrders = () => {
             "Are you sure\nYou want to delete this order..!?"
         );
         if (warning) {
-            const url = `https://polar-dusk-79749.herokuapp.com/orders/${id}`;
+            const url = `https://x-part-manufacturer.onrender.com/orders/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {
